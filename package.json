@@ -24,6 +24,7 @@
     "vuepress-plugin-auto-sidebar": "^2.3.2"
   },
   "dependencies": {
+    "moment": "^2.29.1",
     "vuepress-auto-sidebar-doumjun": "^1.0.1"
   }
 }

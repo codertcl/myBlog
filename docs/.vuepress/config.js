@@ -1,4 +1,7 @@
+const moment = require('moment')
+
 module.exports = {
+    base:'/my-blog/',
     title: 'TCL博客',
     description: '个人小天地',
     dest: './dist',//默认在.vuepress下
@@ -14,7 +17,7 @@ module.exports = {
     subSidebar: 'auto',//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     sidebar: "auto",//所有页面自动生成侧边栏
     themeConfig: {
-        lastUpdated:'更新时间',
+        lastUpdated: '更新时间',
         logo: '/assets/img/1.jpg',//左上角logo
         nav: require('./nav'),
         sidebar: [
@@ -40,26 +43,12 @@ module.exports = {
         ]
     },
     plugins: [
-        ["vuepress-plugin-auto-sidebar", {
-            sort: {
-                mode: "asc",
-                readmeFirst: true,
-                readmeFirstForce: false
-            },
-            title: {
-                mode: "titlecase",
-                map: {}
-            },
-            sidebarDepth: 1,
-            collapse: {
-                open: false,
-                collapseList: [],
-                uncollapseList: []
-            },
-            ignore: [],
-            git: {
-                trackStatus: 'all'
+        '@vuepress/last-updated',
+        {
+            transformer: (timestamp) => {
+                moment.locale('zh-CN')
+                return moment(timestamp).format('YYYY年M月D日H时m分s秒"')
             }
-        }]
+        },
     ]
 }
