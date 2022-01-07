@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":  "vuepress dev docs --temp .temp",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "nav": "vuepress nav docs"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,10 @@
   },
   "homepage": "https://github.com/wuxinabc/my-blog#readme",
   "devDependencies": {
-    "vuepress": "^1.9.5"
+    "vuepress": "^1.9.5",
+    "vuepress-plugin-auto-sidebar": "^2.3.2"
+  },
+  "dependencies": {
+    "vuepress-auto-sidebar-doumjun": "^1.0.1"
   }
 }

@@ -1,7 +1,5 @@
 ---
 home: true
-# heroImage: /hero.png
-heroText: 博客
 tagline: sxy
 actionText: 快速上手 →
 actionLink: /zh/guide/
@@ -14,5 +12,3 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
-
-'# Hello VuePress' 
